@@ -10,3 +10,12 @@
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+
+## Personl
+# Hard simlink file list
+static/css/pokemon_site.css
+static/js/pokemon_site.js
+templates/pokemon_site.html
+
+# Ghostwriter creates this file...
+README.md.backup
