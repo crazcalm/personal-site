@@ -40,7 +40,7 @@ func (p page) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(err)
 	}
 
-	p.log.Printf("Serving %s -- view count: %d", p.name)
+	p.log.Printf("Serving %s", p.name)
 }
 
 func main() {
