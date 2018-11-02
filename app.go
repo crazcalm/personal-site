@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"html/template"
 	"io/ioutil"
 	"log"
@@ -64,5 +65,6 @@ func main() {
 	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir(filepath.Join(".", "static")))))
 
 	server := http.Server{Addr: port, Handler: mux}
+	fmt.Printf("Serving at http://localhost%s\n", port)
 	log.Fatal(server.ListenAndServe())
 }
